@@ -1,4 +1,4 @@
 PrimerCalc
 ==========
 
-annealing temperature calculator
+annealing temperature calculator for PCR reactions
