@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/dna"
+    tools:context=".MainActivity" >
+
+    <EditText android:id="@+id/edit_message"
+        android:cursorVisible="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="#FF0000"
+        android:hint="@string/edit_message" />
+        
+    <ImageButton android:id="@+id/button_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+		android:layout_below="@id/edit_message"
+        android:contentDescription="@string/button_send"
+        android:src="@drawable/equals"
+        android:onClick="sendMessage" />
+    
+    <ImageButton android:id="@+id/btnBkSp"
+        android:contentDescription="@string/button_backspace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_message"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/button_backspace"
+        android:onClick="changeSequenceDisplay"/>
+       
+    	<View android:id="@+id/strut"
+        	android:layout_width="30dp"
+        	android:layout_height="0dp" 
+        	android:layout_centerHorizontal="true"/>
+    	
+    	<Button
+    	    android:id="@+id/btnA"
+    	    android:background="#FFFF00"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentLeft="true"
+    	    android:layout_above="@+id/btnSpc"
+    	    android:layout_toLeftOf="@id/strut"
+    	    android:onClick="changeSequenceDisplayA"
+    	    android:text="@string/button_a" />
+
+    	<Button android:id="@+id/btnT"
+    	    android:background="#0000FF"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_toRightOf="@id/strut"
+        	android:layout_alignParentRight="true"
+        	android:layout_above="@+id/btnSpc2"
+        	android:text="@string/button_t"
+        	android:onClick="changeSequenceDisplayT"/>
+    	      
+    	<Button android:id="@+id/btnC"
+    	    android:background="#00FF00"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_toLeftOf="@id/strut"
+        	android:layout_alignParentBottom="true"
+        	android:layout_alignParentLeft="true"
+        	android:text="@string/button_c"
+        	android:onClick="changeSequenceDisplayC"/>
+    
+    	<Button android:id="@+id/btnG"
+    	    android:background="#FF0000"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_toRightOf="@id/strut"
+        	android:layout_alignParentRight="true"
+        	android:layout_alignParentBottom="true"
+        	android:text="@string/button_g"
+        	android:onClick="changeSequenceDisplayG"/>
+    	
+   		<View android:id="@+id/btnSpc"
+        	android:layout_width="0dp"
+        	android:layout_height="30dp"
+        	android:layout_above="@+id/btnC" />
+   		
+    	<View android:id="@+id/btnSpc2"
+        	android:layout_width="0dp"
+        	android:layout_height="30dp" 
+        	android:layout_above="@+id/btnG"/>
+
+</RelativeLayout>
